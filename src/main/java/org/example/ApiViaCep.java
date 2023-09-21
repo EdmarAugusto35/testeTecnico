@@ -43,7 +43,7 @@ public class ApiViaCep {
                 }
                 buff.close();
 
-                // Tratando o problema do erro no json por causa do cep errado
+                // Tratando o problema do erro no json devido ao cep errado
                 try{
                 JSONObject jsonObject = new JSONObject(str.toString());
                 return jsonObject.getString("localidade");
