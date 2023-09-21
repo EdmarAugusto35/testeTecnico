@@ -4,11 +4,14 @@ package org.example;
 import org.example.entidade.Pessoa;
 
 import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Stream;
 
 public class LerArquivoCsv {
     public static List<Pessoa>lerArquivoCsv(){
-        String arquivoCsv = "C:/Users/EDMAR/Desktop/Dev/Prime/Teste_Prime/arquivoCSV/database.csv";
+        String arquivoCsv = System.getProperty("user.home") + "/Desktop/Dev/Prime/Teste_Prime/arquivoCSV/database.csv";
        List<Pessoa> pessoaList = new ArrayList<Pessoa>();
         try (BufferedReader br = new BufferedReader(new FileReader(arquivoCsv))) {
             String line = br.readLine();
